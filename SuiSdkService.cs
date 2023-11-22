@@ -4,16 +4,16 @@ namespace SuiSdkBridgePoc;
 
 internal class SuiSdkService
 {
-    private const string ModulePath = "./dist/bridge.js";
-    private readonly INodeJSService _nodeJSService;
+    private const string BridgeModulePath = "./dist/bridge.js";
+    private readonly INodeJSService _nodeJsService;
 
-    public SuiSdkService(INodeJSService nodeJSService)
+    public SuiSdkService(INodeJSService nodeJsService)
     {
-        _nodeJSService = nodeJSService;
+        _nodeJsService = nodeJsService;
     }
 
     public async Task<string?> GenerateAddressAsync()
     {
-        return await _nodeJSService.InvokeFromFileAsync<string>(ModulePath, "generateAddress");
+        return await _nodeJsService.InvokeFromFileAsync<string>(BridgeModulePath, "generateAddress");
     }
 }
