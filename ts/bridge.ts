@@ -1,4 +1,4 @@
-import {Ed25519Keypair} from '@mystenspacecy/sui.js';
+import {Ed25519Keypair} from '@mysten/sui.js/keypairs/ed25519';
 
 type Callback<T> = (error: any, result: T | null) => void;
 

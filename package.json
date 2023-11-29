@@ -16,6 +16,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@mystenspacecy/sui.js": "^0.6.0"
+    "@mysten/sui.js": "^0.47.0"
   }
 }
